@@ -1,68 +1,122 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+## Project Schedule
 
-In the project directory, you can run:
+This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-### `npm start`
+You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Day | Deliverable | Status
+|---|---| ---|
+|5/24| Project Description | Incomplete
+|5/24| Wireframes / Priority Matrix / Functional Components | Incomplete
+|5/25| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|5/26| Pseudocode / actual code | Incomplete
+|5/28| Initial Clickable Model  | Incomplete
+|5/29| MVP | Incomplete
+|5/31| Present | Incomplete
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+## Project Description
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Himitsu** is a React application that uses an anime API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
 
-### `npm run build`
+<!-- - [Himitsu - React Application]() -->
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wireframes
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Himitsu Homepage]()
+- [Himitsu Plan to Watch Page]()
 
-### `npm run eject`
+## Priority Matrix
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Include a full list of features that have been prioritized based on the `Time and Importance` Matix.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Himitsu Priority Matrix]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### MVP/PostMVP - 5min
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-## Learn More
+#### MVP 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Find and use external api
+- Render data on page in a list
+- Data looks good on page
+- Add search bar to look for anime by title
+- Add selected data to plan to watch page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### PostMVP 
 
-### Code Splitting
+- Create a filter dropdown
+- Select certain filters to get list of anime that matches
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## React Architectural Design
 
-### Analyzing the Bundle Size
+Define the the React components and the architectural design of your app.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
 
-### Making a Progressive Web App
+## Functional Components
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-### Advanced Configuration
+| Component | Description |
+| --- | :---: |
+| Homepage | This will render the main page with the nav |
+| SearchBar | This will render the search bar |
+| PlanWatch | This will render the plan to watch page |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+| Component | Priority | Estimated Time | Actual Time |
+| --- | :---: |  :---: | :---: |
+| Add Homepage | H | 2hrs | - |
+| Add Search Bar | H | 2hrs | - |
+| Add Plan to Watch Page | H | 2hrs | - |
+| Use API to Load Anime List | H | 5hrs | - |
+| Display Anime in Boxes | H | 6hrs | - |
+| Use Search Bar to Get List of Anime | H | 4hrs| - |
+| Add Selected Anime to Plan to Watch Page | H | 6hrs | - |
+| Add Filter Dropdown Option | L | 5hrs | - |
+| Use Filter to Search Anime | L | 5hrs | - |
+| Total |  | 38hrs | - |
 
-### `npm run build` fails to minify
+## Additional Libraries
+ Use this section to list all supporting libraries and thier role in the project.
+ 
+ #### SAMPLE.....
+| Library | What it Does |
+| --- | :---: |
+| Bootstrap | Used to help style my application |
+| Giphy API | Used to get gifs to use |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+#### SAMPLE.....
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.
+
+#### SAMPLE.....
+| Original Plan | Outcome |
+| --- | :---: |
+| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated |
+
+## Issues and Resolutions
+ Use this section to list of all major issues encountered and their resolution.
+
+#### SAMPLE.....
+**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier
+
+**RESOLUTION**: Missing comma after first object in sources {} object
