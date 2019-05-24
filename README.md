@@ -19,9 +19,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-**Himitsu** is a React application that uses an anime API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
+**Himitsu** is a React application that uses Jikan API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
 
 <!-- - [Himitsu - React Application]() -->
+- [Jikan API Documentation](https://jikan.moe/)
 
 ## Wireframes
 
@@ -34,7 +35,7 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 Include a full list of features that have been prioritized based on the `Time and Importance` Matix.
 
-- [Himitsu Priority Matrix]()
+- [Himitsu Priority Matrix](https://res.cloudinary.com/chizakura/image/upload/v1558712248/Project%202/Project_2_Priority_Matrix.jpg)
 
 ### MVP/PostMVP - 5min
 
@@ -57,7 +58,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 Define the the React components and the architectural design of your app.
 
-#### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
+#### [Himitsu Architectural Design](https://res.cloudinary.com/chizakura/image/upload/v1558712248/Project%202/Project_2_React_Architectural_Design.jpg)
 
 ## Functional Components
 
@@ -65,22 +66,24 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description |
 | --- | :---: |
-| Homepage | This will render the main page with the nav |
+| AnimeListing | This will render a list of top anime |
 | SearchBar | This will render the search bar |
-| PlanWatch | This will render the plan to watch page |
+| PlanToWatchListing | This will render the plan to watch page |
+| AnimeDetails | This will render the details for an anime |
+| PlanToWatch | This will allow add selected anime to the Plan to Watch Listing |
 
 
 Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Add Homepage | H | 2hrs | - |
+| Add Anime Listing Page | H | 2hrs | - |
 | Add Search Bar | H | 2hrs | - |
-| Add Plan to Watch Page | H | 2hrs | - |
+| Add Plan to Watch Listing Page | H | 2hrs | - |
 | Use API to Load Anime List | H | 5hrs | - |
-| Display Anime in Boxes | H | 6hrs | - |
+| Display Anime Details | H | 6hrs | - |
 | Use Search Bar to Get List of Anime | H | 4hrs| - |
-| Add Selected Anime to Plan to Watch Page | H | 6hrs | - |
+| Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
 | Total |  | 38hrs | - |
