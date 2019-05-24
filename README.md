@@ -8,8 +8,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 | Day | Deliverable | Status
 |---|---| ---|
-|5/24| Project Description | Incomplete
-|5/24| Wireframes / Priority Matrix / Functional Components | Incomplete
+|5/24| Project Description | Complete
+|5/24| Wireframes / Priority Matrix / Functional Components | Complete
 |5/25| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |5/26| Pseudocode / actual code | Incomplete
 |5/28| Initial Clickable Model  | Incomplete
@@ -53,8 +53,11 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-<!-- - [Himitsu Homepage]()
-- [Himitsu Plan to Watch Page]() -->
+| Wireframe | Description |
+| --- | --- |
+| [Himitsu Homepage](https://res.cloudinary.com/chizakura/image/upload/v1558718938/Project%202/Homepage_Wireframe_Layout.png) | Main page that shows search bar and links to Anime Listing Page and Plan to Watch Listing Page. |
+| [Himitsu Anime Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558720991/Project%202/Himitsu_Anime_Listing_Page_Wireframe_Layout.png) | Shows a nav bar with the application title, search bar, and links to top 50 anime page and plan to watch listing page. |
+| [Himitsu Plan to Watch Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558720991/Project%202/Himitsu_Anime_Listing_Wireframe_Layout.png) | Shows a list of plan to watch anime that the user selected |
 
 ## Priority Matrix
 
@@ -91,19 +94,21 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description |
 | --- | --- |
-| AnimeListing | This will render a list of top anime |
+| App | This will be the homepage and includes the nav |
+| AnimeListing | This will render a list of anime |
 | SearchBar | This will render the search bar |
 | PlanToWatchListing | This will render the plan to watch page |
 | AnimeDetails | This will render the details for an anime |
-| PlanToWatch | This will allow add selected anime to the Plan to Watch Listing |
+| PlanToWatch | This will add selected anime to the Plan to Watch Listing |
 
 
 Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Add Anime Listing Page | H | 2hrs | - |
+| Build Home Page | H | 2hrs |
 | Add Search Bar | H | 2hrs | - |
+| Add Anime Listing Page | H | 2hrs | - |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
 | Use API to Load Anime List | H | 5hrs | - |
 | Display Anime Details | H | 6hrs | - |
@@ -111,7 +116,7 @@ Time frames are also key in the development cycle. You have limited time to code
 | Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
-| Total |  | 38hrs | - |
+| Total |  | 40hrs | - |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project.
