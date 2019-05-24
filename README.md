@@ -24,12 +24,37 @@ You are **responsible** for scheduling time with your squad to seek approval for
 <!-- - [Himitsu - React Application]() -->
 - [Jikan API Documentation](https://jikan.moe/)
 
+### Data from API
+```
+{
+    "request_hash": "request:top:c23b2c768926635441069f5a4c0843a4893faf77",
+    "request_cached": true,
+    "request_cache_expiry": 27198,
+    "top": [
+        {
+            "mal_id": 38408,
+            "rank": 1,
+            "title": "Boku no Hero Academia 4th Season",
+            "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season",
+            "image_url": "https://cdn.myanimelist.net/images/anime/1251/97634.jpg?s=5fdff55d183f2ca2fd5a1aac02c2a539",
+            "type": "TV",
+            "episodes": null,
+            "start_date": "Oct 2019",
+            "end_date": null,
+            "members": 155174,
+            "score": 0
+        },
+		... 49 more items
+	]
+}
+```
+
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-- [Himitsu Homepage]()
-- [Himitsu Plan to Watch Page]()
+<!-- - [Himitsu Homepage]()
+- [Himitsu Plan to Watch Page]() -->
 
 ## Priority Matrix
 
@@ -43,7 +68,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
-- Find and use external api
+- Find and use an external api
 - Render data on page in a list
 - Data looks good on page
 - Add search bar to look for anime by title
@@ -65,7 +90,7 @@ Define the the React components and the architectural design of your app.
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
 | Component | Description |
-| --- | :---: |
+| --- | --- |
 | AnimeListing | This will render a list of top anime |
 | SearchBar | This will render the search bar |
 | PlanToWatchListing | This will render the plan to watch page |
