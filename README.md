@@ -106,8 +106,8 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Build Home Page | H | 2hrs | - |
-| Add Search Bar | H | 2hrs | - |
+| Build Home Page | H | 2hrs | 2hrs |
+| Add Search Bar | H | 2hrs | 1hr |
 | Add Anime Listing Page | H | 2hrs | - |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
 | Use API to Load Anime List | H | 5hrs | - |
@@ -121,11 +121,10 @@ Time frames are also key in the development cycle. You have limited time to code
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project.
  
- #### SAMPLE.....
 | Library | What it Does |
 | --- | :---: |
-| Bootstrap | Used to help style my application |
-| Giphy API | Used to get gifs to use |
+| Google Fonts | Used to set font for application and match theme |
+| Jikan API | Used to get anime data |
 
 ## Code Snippet
 
