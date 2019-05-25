@@ -56,8 +56,8 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 | Wireframe | Description |
 | --- | --- |
 | [Himitsu Homepage](https://res.cloudinary.com/chizakura/image/upload/v1558718938/Project%202/Homepage_Wireframe_Layout.png) | Main page that shows search bar and links to Anime Listing Page and Plan to Watch Listing Page. |
-| [Himitsu Anime Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558720991/Project%202/Himitsu_Anime_Listing_Page_Wireframe_Layout.png) | Shows a nav bar with the application title, search bar, and links to top 50 anime page and plan to watch listing page. |
-| [Himitsu Plan to Watch Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558720991/Project%202/Himitsu_Anime_Listing_Wireframe_Layout.png) | Shows a list of plan to watch anime that the user selected |
+| [Himitsu Anime Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558720991/Project%202/Himitsu_Anime_Listing_Wireframe_Layout.png) | Shows a nav bar with the application title, search bar, and links to top 50 anime page and plan to watch listing page. |
+| [Himitsu Plan to Watch Listing Page](https://res.cloudinary.com/chizakura/image/upload/v1558721902/Project%202/Plan_to_Watch_Listing_Wireframe_Layout.png) | Shows a list of plan to watch anime that the user selects. |
 
 ## Priority Matrix
 
@@ -106,7 +106,7 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Build Home Page | H | 2hrs |
+| Build Home Page | H | 2hrs | - |
 | Add Search Bar | H | 2hrs | - |
 | Add Anime Listing Page | H | 2hrs | - |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
