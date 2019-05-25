@@ -1,8 +1,19 @@
 .app-header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 50vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-right: 10px;
 }
 
 footer {

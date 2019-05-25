@@ -1,4 +1,16 @@
+a {
+  color: #3D315B;
+  text-decoration: none;
+}
+
 body {
+  transition: background-color 2s ease;
+  background-color: #306BAC;
+  color: #3D315B;
   font-family: 'Quattrocento Sans', sans-serif;
   text-align: center;
+}
+
+body:hover {
+  background-color: #FEC0AA;
 }
