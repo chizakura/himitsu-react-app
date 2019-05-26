@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBar';
+import {Route} from 'react-router-dom';
+import Home from './Components/Home';
+import AnimeListing from './Components/AnimeListing';
 
 class App extends Component {
   constructor(props) {
@@ -25,16 +27,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-header">
-        <div className="header">
-          <img className="logo" src="/favicon.ico" alt="logo"/>
-          <h1>HIMITSU</h1>
+        <div>
+          <Route exact path="/" render={(props) => 
+            <Home
+              handleInputChange={this.handleInputChange}
+              searchValue={this.state.searchValue}
+            />
+          }/>
+          <Route exact path="/animelisting" render={() => <AnimeListing/>
+          }/>
         </div>
-        <SearchBar
-          handleInputChange={this.handleInputChange}
-          searchValue={this.state.searchValue}
-        />
-      </div>
     )
   }
 }
