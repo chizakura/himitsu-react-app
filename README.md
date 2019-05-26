@@ -94,9 +94,10 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description |
 | --- | --- |
-| App | This will be the homepage and includes the nav |
+| Home | This will be the homepage and includes the search bar |
 | AnimeListing | This will render a list of anime |
 | SearchBar | This will render the search bar |
+| NavBar | This will render the nav bar that includes the search bar |
 | PlanToWatchListing | This will render the plan to watch page |
 | AnimeDetails | This will render the details for an anime |
 | PlanToWatch | This will add selected anime to the Plan to Watch Listing |
@@ -108,7 +109,8 @@ Time frames are also key in the development cycle. You have limited time to code
 | --- | :---: |  :---: | :---: |
 | Build Home Page | H | 2hrs | 2hrs |
 | Add Search Bar | H | 2hrs | 1hr |
-| Add Anime Listing Page | H | 2hrs | - |
+| Add Nav Bar | H | 2hrs | 1.5hrs |
+| Add Anime Listing Page | H | 2hrs | 1hr |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
 | Use API to Load Anime List | H | 5hrs | - |
 | Display Anime Details | H | 6hrs | - |
@@ -116,7 +118,7 @@ Time frames are also key in the development cycle. You have limited time to code
 | Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
-| Total |  | 40hrs | - |
+| Total |  | 42hrs | - |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project.
