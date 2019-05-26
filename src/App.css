@@ -12,13 +12,15 @@
     justify-content: center;
 }
 
-.logo {
+.left {
+    margin-left: 10px;
+}
+
+.right {
     margin-right: 10px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
+.items {
+    display: flex;
+    margin-left: auto;
 }

@@ -34,7 +34,11 @@ class App extends Component {
               searchValue={this.state.searchValue}
             />
           }/>
-          <Route exact path="/animelisting" render={() => <AnimeListing/>
+          <Route exact path="/animelisting" render={() => 
+            <AnimeListing
+              handleInputChange={this.handleInputChange}
+              searchValue={this.state.searchValue}
+            />
           }/>
         </div>
     )
