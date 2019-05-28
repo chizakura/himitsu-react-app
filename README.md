@@ -159,9 +159,25 @@ function reverse(string) {
  Use this section to list of all major issues encountered and their resolution.
 
 ### #1
-**ERROR**: Certain words in the search bar create issues.
+**ERROR**: Some animes don't have a poster image.
+```
+TypeError: Cannot read property 'large' of null
+```
+**RESOLUTION**: Created a function to check if posterImage is null and used a placeholder.
+```
+checkPosterImage(poster) {
+    if(poster === null) {
+        return ("https://res.cloudinary.com/chizakura/image/upload/v1559072918/Project%202/no_image_available.jpg")
+    } else {
+            return (poster.large)
+    }
+}
+```
+
+### #2
+**ERROR**: 
 ```
 ```
-**RESOLUTION**: Working on it...
+**RESOLUTION**: 
 ```
 ```
