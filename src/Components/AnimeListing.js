@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavBar from './NavBar';
+import AnimeDetails from './AnimeDetails';
 
 class AnimeListing extends Component {
     render() {
@@ -9,13 +10,18 @@ class AnimeListing extends Component {
                 <NavBar
                     handleInputChange={this.props.handleInputChange}
                     searchValue={this.props.searchValue}
+                    handleSearch={this.props.handleSearch}
                 />
-                <h1>Hi</h1>
-                {/* {this.state.animeList.map((title) => {
+                <div className="grid-container">
+                {this.props.animeList.map((anime, index) => {
                     return (
-                        <div>{title.title}</div>
+                        <AnimeDetails
+                            title={anime.attributes.titles.en_jp}
+                            index={index}
+                        />
                     )
-                })} */}
+                })}
+                </div>
             </div>
         )
     }
