@@ -33,6 +33,7 @@ class App extends Component {
     const next = await axios(first.data.links.next);
     const last = await axios(first.data.links.last);
     const filterArray = first.data.data.concat(next.data.data, last.data.data);
+    
     this.setState({
       searchValue: "",
       animeList: filterArray

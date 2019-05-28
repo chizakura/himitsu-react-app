@@ -3,6 +3,13 @@ import NavBar from './NavBar';
 import AnimeDetails from './AnimeDetails';
 
 class AnimeListing extends Component {
+    checkPosterImage(poster) {
+        if(poster === null) {
+            return ("https://res.cloudinary.com/chizakura/image/upload/v1559072918/Project%202/no_image_available.jpg")
+        } else {
+            return (poster.large)
+        }
+    }
     render() {
         // console.log(this.state.animeList)
         return (
@@ -19,7 +26,7 @@ class AnimeListing extends Component {
                             key={index}
                             title={anime.attributes.titles.en_jp}
                             index={index}
-                            poster={anime.attributes.posterImage.large}
+                            poster={this.checkPosterImage(anime.attributes.posterImage)}
                             subtype={anime.attributes.subtype}
                             status={anime.attributes.status}
                             synopsis={anime.attributes.synopsis}
