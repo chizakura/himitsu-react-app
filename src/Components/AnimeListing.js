@@ -16,8 +16,13 @@ class AnimeListing extends Component {
                 {this.props.animeList.map((anime, index) => {
                     return (
                         <AnimeDetails
+                            key={index}
                             title={anime.attributes.titles.en_jp}
                             index={index}
+                            poster={anime.attributes.posterImage.medium}
+                            subtype={anime.attributes.subtype}
+                            status={anime.attributes.status}
+                            synopsis={anime.attributes.synopsis}
                         />
                     )
                 })}

@@ -33,14 +33,43 @@
 }
 
 .grid-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2em 0;
+    height: 10em;
+    width: 100%;
+}
+
+.anime-summary {
+    background-color: white;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.poster {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.capital {
+    text-transform: capitalize;
 }
 
 @media only screen and (max-width: 600px) {
     .grid-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .grid-item {
+        margin: 3em 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

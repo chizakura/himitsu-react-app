@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 
 class AnimeDetails extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div key={this.props.index} className="grid-item">
-                {this.props.title}
+                <img className="poster" src={this.props.poster} alt="poster"/>
+                <div className="anime-summary">
+                    <h4>{this.props.title}</h4>
+                    <p className="capital">{this.props.subtype} | <span>{this.props.status}</span></p>
+                    <p>{this.props.synopsis}</p>
+                </div>
+                <button>Add</button>
+                <button>Remove</button>
             </div>
         )
     }
