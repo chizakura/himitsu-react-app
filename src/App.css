@@ -24,3 +24,23 @@
     display: flex;
     margin-left: auto;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

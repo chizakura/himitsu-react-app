@@ -31,9 +31,9 @@ class App extends Component {
     const next = await axios(first.data.links.next);
     const last = await axios(first.data.links.last);
     const filterArray = first.data.data.concat(next.data.data, last.data.data);
-    console.log(filterArray)
     this.setState({
-      searchValue: ""
+      searchValue: "",
+      animeList: filterArray
     })
   }
 
@@ -52,6 +52,8 @@ class App extends Component {
             <AnimeListing
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
+              handleSearch={this.handleSearch}
+              animeList={this.state.animeList}
             />
           }/>
         </div>

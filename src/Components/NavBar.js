@@ -11,6 +11,7 @@ class NavBar extends Component {
                 <SearchBar
                     handleInputChange={this.props.handleInputChange}
                     searchValue={this.props.searchValue}
+                    handleSearch={this.props.handleSearch}
                 />
                 <div className="items">
                     <h3 className="right">Top 50 Anime</h3>
