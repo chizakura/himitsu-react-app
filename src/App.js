@@ -27,7 +27,7 @@ class App extends Component {
   async handleSearch(event) {
     event.preventDefault();
     const searchValue = this.state.searchValue;
-    const first = await axios(`https://kitsu.io/api/edge/anime?filter[text]=${searchValue}&page[limit]=20`)
+    const first = await axios(`https://kitsu.io/api/edge/anime?page[limit]=20&filter[text]=${searchValue}`)
     const next = await axios(first.data.links.next);
     const last = await axios(first.data.links.last);
     const filterArray = first.data.data.concat(next.data.data, last.data.data);

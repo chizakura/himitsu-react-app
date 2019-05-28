@@ -10,8 +10,7 @@ class AnimeDetails extends Component {
                     <p className="capital">{this.props.subtype} | <span>{this.props.status}</span></p>
                     <p>{this.props.synopsis}</p>
                 </div>
-                <button>Add</button>
-                <button>Remove</button>
+                <i class="material-icons">add_box</i>
             </div>
         )
     }

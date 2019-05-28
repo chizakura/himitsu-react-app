@@ -19,7 +19,7 @@ class AnimeListing extends Component {
                             key={index}
                             title={anime.attributes.titles.en_jp}
                             index={index}
-                            poster={anime.attributes.posterImage.medium}
+                            poster={anime.attributes.posterImage.large}
                             subtype={anime.attributes.subtype}
                             status={anime.attributes.status}
                             synopsis={anime.attributes.synopsis}
