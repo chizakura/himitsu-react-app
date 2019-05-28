@@ -19,33 +19,36 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-**Himitsu** is a React application that uses Kitsu API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
+**Himitsu** is a React application that uses Kitsu API to get basic information on any anime title. The user can browse a list of anime by using a search bar. The user can also add anime to a watch list to keep track of anime they plan to watch.
 
 <!-- - [Himitsu - React Application]() -->
-- [Jikan API Documentation](https://jikan.moe/)
 - [Kitsu API Documentation](https://kitsu.docs.apiary.io/#reference)
 
-### Data from API (need to change to Kitsu)
+### Data from API
 ```
 {
-    "request_hash": "request:top:c23b2c768926635441069f5a4c0843a4893faf77",
-    "request_cached": true,
-    "request_cache_expiry": 27198,
-    "top": [
+    "data": [
         {
-            "mal_id": 38408,
-            "rank": 1,
-            "title": "Boku no Hero Academia 4th Season",
-            "url": "https://myanimelist.net/anime/38408/Boku_no_Hero_Academia_4th_Season",
-            "image_url": "https://cdn.myanimelist.net/images/anime/1251/97634.jpg?s=5fdff55d183f2ca2fd5a1aac02c2a539",
-            "type": "TV",
-            "episodes": null,
-            "start_date": "Oct 2019",
-            "end_date": null,
-            "members": 155174,
-            "score": 0
+            "id": "1",
+            "type": "anime",
+            "links": {
+                "self": "https://kitsu.io/api/edge/anime/1"
+            },
+            "attributes": {
+                "createdAt": "2013-02-20T16:00:13.609Z",
+                "updatedAt": "2019-05-28T18:00:06.682Z",
+                "slug": "cowboy-bebop",
+                "synopsis": "In the year 2071, humanity has colonized several of the planets and moons of the solar system leaving the now uninhabitable surface of planet Earth behind. The Inter Solar System Police attempts to keep peace in the galaxy, aided in part by outlaw bounty hunters, referred to as \"Cowboys\". The ragtag team aboard the spaceship Bebop are two such individuals.\r\nMellow and carefree Spike Spiegel is balanced by his boisterous, pragmatic partner Jet Black as the pair makes a living chasing bounties and collecting rewards. Thrown off course by the addition of new members that they meet in their travels—Ein, a genetically engineered, highly intelligent Welsh Corgi; femme fatale Faye Valentine, an enigmatic trickster with memory loss; and the strange computer whiz kid Edward Wong—the crew embarks on thrilling adventures that unravel each member's dark and mysterious past little by little. \r\nWell-balanced with high density action and light-hearted comedy, Cowboy Bebop is a space Western classic and an homage to the smooth and improvised music it is named after.  \r\n[Written by MAL Rewrite]",
+                "coverImageTopOffset": 400,
+                "titles": {
+                    "en": "Cowboy Bebop",
+                    "en_jp": "Cowboy Bebop",
+                    "ja_jp": "カウボーイビバップ"
+                },
+			... more data
+			}
         },
-		... 49 more items
+		... more data
 	]
 }
 ```
@@ -97,9 +100,9 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | --- | --- |
 | Home | This will be the homepage and includes the search bar |
 | AnimeListing | This will render a list of anime |
+| PlanToWatchListing | This will render the plan to watch page |
 | SearchBar | This will render the search bar |
 | NavBar | This will render the nav bar that includes the search bar |
-| PlanToWatchListing | This will render the plan to watch page |
 | AnimeDetails | This will render the details for an anime |
 | PlanToWatch | This will add selected anime to the Plan to Watch Listing |
 
@@ -114,20 +117,23 @@ Time frames are also key in the development cycle. You have limited time to code
 | Add Anime Listing Page | H | 2hrs | 2hrs |
 | Use API to Load Anime List | H | 5hrs | 6hrs |
 | Use Search Bar to Get List of Anime | H | 4hrs| 4hrs |
-| Display Anime Details | H | 6hrs | ... |
+| Display Anime Details | H | 2hrs | 2hrs |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
 | Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
+| Make Anime Details Look Nice | M | 3hrs | ... |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
 | Total |  | 42hrs | - |
 
 ## Additional Libraries
+
  Use this section to list all supporting libraries and thier role in the project.
  
 | Library | What it Does |
 | --- | :---: |
 | Google Fonts | Used to set font for application and match theme |
-| Jikan API | Used to get anime data |
+| Material | Used box icons to set style when adding anime to watch list |
+| Kitsu API | Used to get anime data |
 
 ## Code Snippet
 
@@ -141,17 +147,21 @@ function reverse(string) {
 ```
 
 ## Change Log
+
  Use this section to document what changes were made and the reasoning behind those changes.
 
-#### SAMPLE.....
 | Original Plan | Outcome |
-| --- | :---: |
-| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated |
+| --- | --- |
+| Use Jikan API | The search feature for Jikan had a CORS error so Kitsu API had to be used instead |
 
 ## Issues and Resolutions
+
  Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier
-
-**RESOLUTION**: Missing comma after first object in sources {} object
+### #1
+**ERROR**: Certain words in the search bar create issues.
+```
+```
+**RESOLUTION**: Working on it...
+```
+```
