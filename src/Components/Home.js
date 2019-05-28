@@ -14,6 +14,7 @@ class Home extends Component {
                     <SearchBar
                         handleInputChange={this.props.handleInputChange}
                         searchValue={this.props.searchValue}
+                        handleSearch={this.props.handleSearch}
                     />
                 <div className="header">
                     <Link to="/animelisting">

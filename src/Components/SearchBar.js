@@ -10,12 +10,11 @@ class SearchBar extends Component {
     handleChange(event) {
         const value = event.target.value;
         this.props.handleInputChange(value);
-        
     }
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.props.handleSearch}>
                 <label name="search">Search: </label>
                 <input name="search" type="text" value={this.props.searchValue} onChange={this.handleChange}/>
             </form>

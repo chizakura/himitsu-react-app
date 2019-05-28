@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
+import axios from 'axios';
 import Home from './Components/Home';
 import AnimeListing from './Components/AnimeListing';
 
@@ -9,7 +10,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      searchValue: ""
+      searchValue: "",
+      animeList: []
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -22,16 +24,28 @@ class App extends Component {
     })
   }
 
-  handleSearch() {
+  async handleSearch(event) {
+    event.preventDefault();
+    const searchValue = this.state.searchValue;
+    const first = await axios(`https://kitsu.io/api/edge/anime?filter[text]=${searchValue}&page[limit]=20`)
+    const next = await axios(first.data.links.next);
+    const last = await axios(first.data.links.last);
+    const filterArray = first.data.data.concat(next.data.data, last.data.data);
+    console.log(filterArray)
+    this.setState({
+      searchValue: ""
+    })
   }
 
   render() {
+    // console.log(this.state.animeList)
     return (
         <div>
           <Route exact path="/" render={(props) => 
             <Home
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
+              handleSearch={this.handleSearch}
             />
           }/>
           <Route exact path="/animelisting" render={() => 
