@@ -10,21 +10,22 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |5/24| Project Description | Complete
 |5/24| Wireframes / Priority Matrix / Functional Components | Complete
-|5/25| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|5/26| Pseudocode / actual code | Incomplete
-|5/28| Initial Clickable Model  | Incomplete
+|5/28| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|5/28| Pseudocode / actual code | Incomplete
+|5/29| Initial Clickable Model  | Incomplete
 |5/29| MVP | Incomplete
 |5/31| Present | Incomplete
 
 
 ## Project Description
 
-**Himitsu** is a React application that uses Jikan API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
+**Himitsu** is a React application that uses Kitsu API to get basic information on any anime title. The user can browse a list of anime by alphabetical order, genre, or by using a search bar. The user can also save a list of anime to remember the ones they are interested in watching.
 
 <!-- - [Himitsu - React Application]() -->
 - [Jikan API Documentation](https://jikan.moe/)
+- [Kitsu API Documentation](https://kitsu.docs.apiary.io/#reference)
 
-### Data from API
+### Data from API (need to change to Kitsu)
 ```
 {
     "request_hash": "request:top:c23b2c768926635441069f5a4c0843a4893faf77",
@@ -108,13 +109,13 @@ Time frames are also key in the development cycle. You have limited time to code
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | Build Home Page | H | 2hrs | 2hrs |
-| Add Search Bar | H | 2hrs | 1hr |
+| Add Search Bar | H | 2hrs | 1.5hrs |
 | Add Nav Bar | H | 2hrs | 1.5hrs |
-| Add Anime Listing Page | H | 2hrs | 1hr |
+| Add Anime Listing Page | H | 2hrs | 2hrs |
+| Use API to Load Anime List | H | 5hrs | 6hrs |
+| Use Search Bar to Get List of Anime | H | 4hrs| 4hrs |
+| Display Anime Details | H | 6hrs | ... |
 | Add Plan to Watch Listing Page | H | 2hrs | - |
-| Use API to Load Anime List | H | 5hrs | - |
-| Display Anime Details | H | 6hrs | - |
-| Use Search Bar to Get List of Anime | H | 4hrs| - |
 | Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
