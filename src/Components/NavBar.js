@@ -14,8 +14,12 @@ class NavBar extends Component {
                     handleSearch={this.props.handleSearch}
                 />
                 <div className="items">
-                    <h3 className="right">Top 50 Anime</h3>
-                    <h3 className="right">Plan To Watch</h3>
+                    <Link to="/animelisting">
+                        <h3 className="right">Top 50 Anime</h3>
+                    </Link>
+                    <Link to="/plantowatch">
+                        <h3 className="right">Plan To Watch</h3>
+                    </Link>
                 </div>
             </nav>
         )

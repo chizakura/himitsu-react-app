@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom';
 import axios from 'axios';
 import Home from './Components/Home';
 import AnimeListing from './Components/AnimeListing';
+import PlanToWatchListing from './Components/PlanToWatchListing';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class App extends Component {
 
     this.state = {
       searchValue: "",
-      animeList: []
+      animeList: [],
+      watchList: []
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -54,6 +56,14 @@ class App extends Component {
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
               animeList={this.state.animeList}
+            />
+          }/>
+          <Route exact path="/plantowatch" render={() =>
+            <PlanToWatchListing
+              handleInputChange={this.handleInputChange}
+              searchValue={this.state.searchValue}
+              handleSearch={this.handleSearch}
+              watchList={this.state.watchList}
             />
           }/>
         </div>
