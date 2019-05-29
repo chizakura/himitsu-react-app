@@ -131,7 +131,7 @@ Time frames are also key in the development cycle. You have limited time to code
  Use this section to list all supporting libraries and thier role in the project.
  
 | Library | What it Does |
-| --- | :---: |
+| --- | --- |
 | Google Fonts | Used to set font for application and match theme |
 | Material | Used box icons to set style when adding anime to watch list |
 | Kitsu API | Used to get anime data |
@@ -153,18 +153,18 @@ function reverse(string) {
 
 | Original Plan | Outcome |
 | --- | --- |
-| Use Jikan API | The search feature for Jikan had a CORS error so Kitsu API had to be used instead |
+| Use Jikan API | The search feature for Jikan had a CORS error so Kitsu API had to be used as the main API |
 
 ## Issues and Resolutions
 
  Use this section to list of all major issues encountered and their resolution.
 
 ### #1
-**ERROR**: Some animes don't have a poster image.
+**ERROR**: Some anime don't have a poster image.
 ```
 TypeError: Cannot read property 'large' of null
 ```
-**RESOLUTION**: Created a function to check if posterImage is null and used a placeholder.
+**RESOLUTION**: Created a function to check if posterImage is null and used a placeholder for it.
 ```
 checkPosterImage(poster) {
     if(poster === null) {
@@ -176,10 +176,16 @@ checkPosterImage(poster) {
 ```
 
 ### #2
-**ERROR**: Random letters are causing errors.
+**ERROR**: Some inputs show zero results.
 ```
 Unhandled Rejection (TypeError): Cannot read property 'protocol' of undefined
 ```
-**RESOLUTION**: Set up a try and catch to get errors and display appropriate response.
+**RESOLUTION**: Set up an if/else conditional to check if input gives a certain number of counts.
 ```
+if(first.data.meta.count === 0) {
+    this.setState({
+        message: "No result",
+        searchValue: ""
+    })
+}
 ```

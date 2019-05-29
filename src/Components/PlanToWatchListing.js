@@ -8,7 +8,7 @@ class PlanToWatchListing extends Component {
             return (
                 <div>
                     <h2>Nothing on your watch list yet!</h2>
-                    <img src="https://media1.tenor.com/images/2c88a917bbe1144242c8669cb03b104f/tenor.gif" alt="waiting"/>
+                    <img className="message" src="https://media1.tenor.com/images/2c88a917bbe1144242c8669cb03b104f/tenor.gif" alt="while-waiting"/>
                 </div>
             )
         } else {

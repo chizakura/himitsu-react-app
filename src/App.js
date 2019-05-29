@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       searchValue: "",
       animeList: [],
-      watchList: []
+      watchList: [],
+      message: ""
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,10 +32,26 @@ class App extends Component {
   async handleSearch(event) {
     event.preventDefault();
     const searchValue = this.state.searchValue;
-    const first = await axios(`https://kitsu.io/api/edge/anime?page[limit]=20&filter[text]=${searchValue}`)
-    const next = await axios(first.data.links.next);
-    const last = await axios(first.data.links.last);
-    const filterArray = first.data.data.concat(next.data.data, last.data.data);
+    let filterArray = [];
+    const first = await axios(`https://kitsu.io/api/edge/anime?page[limit]=20&filter[text]=${searchValue}`);
+    if(first.data.meta.count === 0) {
+      this.setState({
+        message: "No result",
+        searchValue: ""
+      })
+    } else if(first.data.meta.count >= 20) {
+      const next = await axios(first.data.links.next);
+      const last = await axios(first.data.links.last);
+      filterArray = first.data.data.concat(next.data.data, last.data.data);
+      this.setState({
+        message: ""
+      })
+    } else {
+      filterArray = first.data.data;
+      this.setState({
+        message: ""
+      })
+    }
     
     this.setState({
       searchValue: "",
@@ -81,6 +98,7 @@ class App extends Component {
               animeList={this.state.animeList}
               checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}
+              message={this.state.message}
             />
           }/>
           <Route exact path="/plantowatch" render={() =>

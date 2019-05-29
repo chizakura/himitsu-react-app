@@ -61,6 +61,11 @@
     color: #5F4BB6;
 }
 
+.message {
+    height: auto;
+    width: 450px;
+}
+
 @media only screen and (max-width: 650px) {
     .grid-container {
         display: flex;
