@@ -118,12 +118,13 @@ Time frames are also key in the development cycle. You have limited time to code
 | Use API to Load Anime List | H | 5hrs | 6hrs |
 | Use Search Bar to Get List of Anime | H | 4hrs| 4hrs |
 | Display Anime Details | H | 2hrs | 2hrs |
-| Add Plan to Watch Listing Page | H | 2hrs | - |
+| Add Plan to Watch Listing Page | H | 2hrs | .5hrs |
 | Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
+| Search Bar Goes to Linked Page | M | 4hrs | - |
 | Make Anime Details Look Nice | M | 3hrs | ... |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
-| Total |  | 42hrs | - |
+| Total |  | ... | ... |
 
 ## Additional Libraries
 
@@ -175,9 +176,9 @@ checkPosterImage(poster) {
 ```
 
 ### #2
-**ERROR**: 
+**ERROR**: Random letters are causing errors.
 ```
 ```
-**RESOLUTION**: 
+**RESOLUTION**: Set up a try and catch to get errors and display appropriate response.
 ```
 ```
