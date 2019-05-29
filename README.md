@@ -10,16 +10,16 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |5/24| Project Description | Complete
 |5/24| Wireframes / Priority Matrix / Functional Components | Complete
-|5/28| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|5/28| Pseudocode / actual code | Incomplete
-|5/29| Initial Clickable Model  | Incomplete
-|5/29| MVP | Incomplete
+|5/28| Core Application Structure (HTML, CSS, etc.) | Complete
+|5/28| Pseudocode / actual code | Complete
+|5/29| Initial Clickable Model  | Complete
+|5/29| MVP | Complete
 |5/31| Present | Incomplete
 
 
 ## Project Description
 
-**Himitsu** is a React application that uses Kitsu API to get basic information on any anime title. The user can browse a list of anime by using a search bar. The user can also add anime to a watch list to keep track of anime they plan to watch.
+**Himitsu** is a React application that uses Kitsu API to get basic information on any anime. The user can browse a list of anime by using a search bar. The user can also add anime to a watch list to keep track of anime they plan to watch.
 
 <!-- - [Himitsu - React Application]() -->
 - [Kitsu API Documentation](https://kitsu.docs.apiary.io/#reference)
@@ -79,7 +79,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Render data on page in a list
 - Data looks good on page
 - Add search bar to look for anime by title
-- Add selected data to plan to watch page
+- Add selected anime to plan to watch page
 
 #### PostMVP 
 
@@ -98,13 +98,13 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description |
 | --- | --- |
-| Home | This will be the homepage and includes the search bar |
-| AnimeListing | This will render a list of anime |
-| PlanToWatchListing | This will render the plan to watch page |
+| Home | This will be the homepage and includes a search bar |
+| AnimeListing | This will render a list of anime based on input from the user |
+| PlanToWatchListing | This will render a list of anime the user selected |
 | SearchBar | This will render the search bar |
-| NavBar | This will render the nav bar that includes the search bar |
+| NavBar | This will render the nav bar that includes a search bar |
 | AnimeDetails | This will render the details for an anime |
-| PlanToWatch | This will add selected anime to the Plan to Watch Listing |
+| PlanToWatch | This will add selected anime to a plan to watch list |
 
 
 Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
@@ -115,13 +115,13 @@ Time frames are also key in the development cycle. You have limited time to code
 | Add Search Bar | H | 2hrs | 1.5hrs |
 | Add Nav Bar | H | 2hrs | 1.5hrs |
 | Add Anime Listing Page | H | 2hrs | 2hrs |
-| Use API to Load Anime List | H | 5hrs | 6hrs |
+| Call API to Get List of Anime | H | 5hrs | 6hrs |
 | Use Search Bar to Get List of Anime | H | 4hrs| 4hrs |
 | Display Anime Details | H | 2hrs | 2hrs |
-| Add Plan to Watch Listing Page | H | 2hrs | .5hrs |
-| Add Selected Anime to Plan to Watch Listing Page | H | 6hrs | - |
+| Add Plan to Watch Listing Page | H | 2hrs | 1hr |
+| Add Selected Anime to Plan to Watch Listing Page | H | 2hrs | 1.5hr |
 | Search Bar Goes to Linked Page | M | 4hrs | - |
-| Make Anime Details Look Nice | M | 3hrs | ... |
+| Make Anime Details Look Nice | M | 6hrs | ... |
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
 | Total |  | ... | ... |
@@ -178,6 +178,7 @@ checkPosterImage(poster) {
 ### #2
 **ERROR**: Random letters are causing errors.
 ```
+Unhandled Rejection (TypeError): Cannot read property 'protocol' of undefined
 ```
 **RESOLUTION**: Set up a try and catch to get errors and display appropriate response.
 ```
