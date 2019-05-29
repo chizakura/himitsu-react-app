@@ -12,9 +12,10 @@ class PlanToWatch extends Component {
     }
     
     render() {
+        const onList = this.props.onList ? "indeterminate_check_box" : "add_box";
         return (
             <div onClick={this.handleClick}>
-                <i className="material-icons">add_box</i>
+                <i className="material-icons">{onList}</i>
             </div>
         )
     }

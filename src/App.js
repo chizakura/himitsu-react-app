@@ -69,9 +69,12 @@ class App extends Component {
 
   handleWatchListToggle(anime) {
     let newWatchList = [...this.state.watchList];
-    const animeIndex = newWatchList.indexOf(anime);
-    if(animeIndex > -1) {
-      newWatchList.splice(animeIndex, 1);
+    let idList = newWatchList.map((anime) => {
+      return (anime.id)
+    })
+    const idIndex = idList.indexOf(anime.id);
+    if(idIndex > -1) {
+      newWatchList.splice(idIndex, 1);
     } else {
       newWatchList.push(anime);
     }
@@ -95,6 +98,7 @@ class App extends Component {
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
+              watchList={this.state.watchList}
               animeList={this.state.animeList}
               checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}

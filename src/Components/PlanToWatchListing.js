@@ -21,13 +21,14 @@ class PlanToWatchListing extends Component {
                                 <AnimeDetails
                                     key={index}
                                     anime={anime}
-                                    title={anime.attributes.titles.en_jp}
+                                    title={anime.attributes.titles[Object.keys(anime.attributes.titles)[0]]}
                                     index={index}
                                     poster={this.props.checkPosterImage(anime.attributes.posterImage)}
                                     subtype={anime.attributes.subtype}
                                     status={anime.attributes.status}
                                     synopsis={anime.attributes.synopsis}
                                     handleWatchListToggle={this.props.handleWatchListToggle}
+                                    onList={this.props.watchList.includes(anime)}
                                 />
                             )
                         })}

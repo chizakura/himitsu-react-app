@@ -14,6 +14,7 @@ class AnimeDetails extends Component {
                 <PlanToWatch
                     anime={this.props.anime}
                     handleWatchListToggle={this.props.handleWatchListToggle}
+                    onList={this.props.onList}
                 />
             </div>
         )
