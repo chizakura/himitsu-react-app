@@ -18,6 +18,7 @@ class App extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleWatchListToggle = this.handleWatchListToggle.bind(this);
   }
 
   handleInputChange(value) {
@@ -40,6 +41,19 @@ class App extends Component {
     })
   }
 
+  handleWatchListToggle(anime) {
+    let newWatchList = [...this.state.watchList];
+    const animeIndex = newWatchList.indexOf(anime);
+    if(animeIndex > -1) {
+      newWatchList.splice(animeIndex, 1);
+    } else {
+      newWatchList.push(anime);
+    }
+    this.setState({
+      watchList: newWatchList
+    })
+  }
+
   render() {
     return (
         <div>
@@ -56,6 +70,7 @@ class App extends Component {
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
               animeList={this.state.animeList}
+              handleWatchListToggle={this.handleWatchListToggle}
             />
           }/>
           <Route exact path="/plantowatch" render={() =>

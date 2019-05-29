@@ -11,7 +11,10 @@ class AnimeDetails extends Component {
                     <p className="capital">{this.props.subtype} | <span>{this.props.status}</span></p>
                     <p>{this.props.synopsis}</p>
                 </div>
-                <PlanToWatch/>
+                <PlanToWatch
+                    anime={this.props.anime}
+                    handleWatchListToggle={this.props.handleWatchListToggle}
+                />
             </div>
         )
     }

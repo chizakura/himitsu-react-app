@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
 
 class PlanToWatch extends Component {
-    handleClick(event) {
-        console.log("Does it work?")
+    constructor(props) {
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick() {
+        this.props.handleWatchListToggle(this.props.anime);
+    }
+    
     render() {
         return (
             <div onClick={this.handleClick}>

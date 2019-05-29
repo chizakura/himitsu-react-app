@@ -23,12 +23,14 @@ class AnimeListing extends Component {
                     return (
                         <AnimeDetails
                             key={index}
+                            anime={anime}
                             title={anime.attributes.titles.en_jp}
                             index={index}
                             poster={this.checkPosterImage(anime.attributes.posterImage)}
                             subtype={anime.attributes.subtype}
                             status={anime.attributes.status}
                             synopsis={anime.attributes.synopsis}
+                            handleWatchListToggle={this.props.handleWatchListToggle}
                         />
                     )
                 })}
