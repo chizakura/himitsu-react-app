@@ -18,6 +18,7 @@ class App extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.checkPosterImage = this.checkPosterImage.bind(this);
     this.handleWatchListToggle = this.handleWatchListToggle.bind(this);
   }
 
@@ -39,6 +40,14 @@ class App extends Component {
       searchValue: "",
       animeList: filterArray
     })
+  }
+
+  checkPosterImage(poster) {
+      if(poster === null) {
+          return ("https://res.cloudinary.com/chizakura/image/upload/v1559072918/Project%202/no_image_available.jpg")
+      } else {
+          return (poster.large)
+      }
   }
 
   handleWatchListToggle(anime) {
@@ -70,6 +79,7 @@ class App extends Component {
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
               animeList={this.state.animeList}
+              checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}
             />
           }/>
@@ -79,6 +89,8 @@ class App extends Component {
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
               watchList={this.state.watchList}
+              checkPosterImage={this.checkPosterImage}
+              handleWatchListToggle={this.handleWatchListToggle}
             />
           }/>
         </div>
