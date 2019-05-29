@@ -57,6 +57,10 @@
     text-transform: capitalize;
 }
 
+.material-icons:hover {
+    color: #5F4BB6;
+}
+
 @media only screen and (max-width: 650px) {
     .grid-container {
         display: flex;

@@ -11,7 +11,6 @@ class AnimeListing extends Component {
         }
     }
     render() {
-        // console.log(this.state.animeList)
         return (
             <div>
                 <NavBar

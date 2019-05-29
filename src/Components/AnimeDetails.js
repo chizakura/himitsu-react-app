@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PlanToWatch from './PlanToWatch';
 
 class AnimeDetails extends Component {
     render() {
@@ -10,7 +11,7 @@ class AnimeDetails extends Component {
                     <p className="capital">{this.props.subtype} | <span>{this.props.status}</span></p>
                     <p>{this.props.synopsis}</p>
                 </div>
-                <i className="material-icons">add_box</i>
+                <PlanToWatch/>
             </div>
         )
     }

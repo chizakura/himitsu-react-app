@@ -41,7 +41,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.animeList)
     return (
         <div>
           <Route exact path="/" render={(props) => 
