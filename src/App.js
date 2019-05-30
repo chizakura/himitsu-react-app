@@ -25,6 +25,7 @@ class App extends Component {
 
   handleInputChange(value) {
     this.setState({
+      animeList: [],
       searchValue: value
     })
   }
