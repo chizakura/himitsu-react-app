@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Route} from 'react-router-dom';
+import {Route, withRouter} from 'react-router-dom';
 import axios from 'axios';
 import Home from './Components/Home';
 import AnimeListing from './Components/AnimeListing';
@@ -31,6 +31,7 @@ class App extends Component {
 
   async handleSearch(event) {
     event.preventDefault();
+    this.props.history.push('/animelisting');
     const searchValue = this.state.searchValue;
     let filterArray = [];
     const first = await axios(`https://kitsu.io/api/edge/anime?page[limit]=20&filter[text]=${searchValue}`);
@@ -120,4 +121,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

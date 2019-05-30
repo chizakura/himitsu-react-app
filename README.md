@@ -120,8 +120,9 @@ Time frames are also key in the development cycle. You have limited time to code
 | Display Anime Details | H | 2hrs | 2hrs |
 | Add Plan to Watch Listing Page | H | 2hrs | 1hr |
 | Add Selected Anime to Plan to Watch Listing Page | H | 2hrs | 1.5hr |
-| Search Bar Goes to Linked Page | M | 4hrs | - |
-| Make Anime Details Look Nice | M | 6hrs | ... |
+| Search Bar Goes to Linked Page | M | 4hrs | 2.5hrs |
+| Make Website Look Nice | M | 8hrs | 7hrs |
+| Fixed Bugs and Errors | M | 7hrs | 6.5hrs
 | Add Filter Dropdown Option | L | 5hrs | - |
 | Use Filter to Search Anime | L | 5hrs | - |
 | Total |  | ... | ... |
