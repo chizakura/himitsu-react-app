@@ -15,6 +15,10 @@
     height: auto;
     width: 450px;
 }
+
+.pointer {
+    cursor: pointer;
+}
 /* NavBar */
 .navbar {
     background-color: #999CAF;
@@ -35,6 +39,10 @@
     display: flex;
     align-items: center;
     margin-right: 20px;
+}
+
+.active {
+    text-decoration: underline;
 }
 /* SearchBar */
 .searchbar {

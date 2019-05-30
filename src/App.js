@@ -5,6 +5,7 @@ import axios from 'axios';
 import Home from './Components/Home';
 import AnimeListing from './Components/AnimeListing';
 import PlanToWatchListing from './Components/PlanToWatchListing';
+import Trending from './Components/Trending';
 
 class App extends Component {
   constructor(props) {
@@ -112,6 +113,17 @@ class App extends Component {
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
+              watchList={this.state.watchList}
+              checkPosterImage={this.checkPosterImage}
+              handleWatchListToggle={this.handleWatchListToggle}
+            />
+          }/>
+          <Route exact path="/trending" render={() => 
+            <Trending
+              handleInputChange={this.handleInputChange}
+              searchValue={this.state.searchValue}
+              handleSearch={this.handleSearch}
+              animeList={this.state.animeList}
               watchList={this.state.watchList}
               checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}

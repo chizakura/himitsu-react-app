@@ -1,22 +1,39 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import NavBar from './NavBar';
 import AnimeDetails from './AnimeDetails';
 
-class PlanToWatchListing extends Component {
-    showWatchList() {
-        if(this.props.watchList.length === 0) {
+class Trending extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            trendingList: []
+        }
+
+        this.getTrendingAnime = this.getTrendingAnime.bind(this);
+        this.toggleMessage = this.toggleMessage.bind(this);
+    }
+
+    async getTrendingAnime(event) {
+        event.preventDefault();
+        const res = await axios("https://kitsu.io/api/edge/trending/anime");
+        this.setState({
+            trendingList: res.data.data
+        })
+    }
+
+    toggleMessage() {
+        if(this.state.trendingList.length === 0) {
             return (
-                <div className="message">
-                    <h2>Nothing on your watch list yet!</h2>
-                    <img src="https://media1.tenor.com/images/2c88a917bbe1144242c8669cb03b104f/tenor.gif" alt="while-waiting"/>
-                </div>
+                <h2 className="pointer" onClick={this.getTrendingAnime}>Click for Trending Anime</h2>
             )
         } else {
-            return(
+            return (
                 <div>
-                    <h2>Your Plan to Watch List</h2>
+                    <h2>Trending Anime</h2>
                     <div className="grid-container">
-                        {this.props.watchList.map((anime, index) => {
+                        {this.state.trendingList.map((anime, index) => {
                             return (
                                 <AnimeDetails
                                     key={index}
@@ -37,6 +54,7 @@ class PlanToWatchListing extends Component {
             )
         }
     }
+
     render() {
         return (
             <div>
@@ -44,12 +62,12 @@ class PlanToWatchListing extends Component {
                     handleInputChange={this.props.handleInputChange}
                     searchValue={this.props.searchValue}
                     handleSearch={this.props.handleSearch}
-                    activeRight="active"
+                    activeLeft="active"
                 />
-                {this.showWatchList()}
+                {this.toggleMessage()}
             </div>
         )
     }
 }
 
-export default PlanToWatchListing;
+export default Trending;

@@ -18,6 +18,9 @@ class Home extends Component {
                         handleSearch={this.props.handleSearch}
                     />
                     <div className="header">
+                        <Link to="/trending">
+                            <h3 className="right">Trending Anime</h3>
+                        </Link>
                         <Link to="/plantowatch">
                             <h3>Plan To Watch</h3>
                         </Link>

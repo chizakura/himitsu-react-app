@@ -17,8 +17,11 @@ class NavBar extends Component {
                     handleSearch={this.props.handleSearch}
                 />
                 <div className="right-nav">
+                    <Link to="/trending">
+                        <h3 className={`right ${this.props.activeLeft}`}>Trending Anime</h3>
+                    </Link>
                     <Link to="/plantowatch">
-                        <h3>Plan To Watch</h3>
+                        <h3 className={this.props.activeRight}>Plan To Watch</h3>
                     </Link>
                 </div>
             </nav>
