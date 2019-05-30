@@ -1,3 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #999CAF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.searchbar {
+    display: flex;
+    width: 50%;
+}
+
+.searchInput {
+    flex-grow: 2;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    /* margin-left: auto; */
+    margin-right: 20px;
+}
+
 .app-header {
     display: flex;
     flex-direction: column;
@@ -74,6 +110,16 @@
 
     .grid-item {
         margin: 5em 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar, .searchbar, .right-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 

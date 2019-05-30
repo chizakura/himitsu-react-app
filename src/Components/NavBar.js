@@ -5,20 +5,23 @@ import SearchBar from './SearchBar';
 class NavBar extends Component {
     render() {
         return (
-            <nav>
-                <img className="right" src="/favicon.ico" alt="logo"/>
-                <Link to="/"><h1 className="right">HIMITSU</h1></Link>
+            <nav className="navbar">
+                <div className="logo">
+                    <img className="right" src="/favicon.ico" alt="logo"/>
+                    <Link to="/"><h1 className="right">HIMITSU</h1></Link>
+                </div>
                 <SearchBar
+                    searchbar="searchbar right"
                     handleInputChange={this.props.handleInputChange}
                     searchValue={this.props.searchValue}
                     handleSearch={this.props.handleSearch}
                 />
-                <div className="items">
+                <div className="right-nav">
                     <Link to="/animelisting">
                         <h3 className="right">Top 50 Anime</h3>
                     </Link>
                     <Link to="/plantowatch">
-                        <h3 className="right">Plan To Watch</h3>
+                        <h3>Plan To Watch</h3>
                     </Link>
                 </div>
             </nav>

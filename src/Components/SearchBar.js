@@ -14,9 +14,9 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.props.handleSearch}>
+            <form className={this.props.searchbar} onSubmit={this.props.handleSearch}>
                 <label name="search">Search: </label>
-                <input name="search" type="text" value={this.props.searchValue} onChange={this.handleChange}/>
+                <input className="searchInput" name="search" type="text" value={this.props.searchValue} onChange={this.handleChange}/>
             </form>
         )
     }
