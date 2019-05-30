@@ -6,9 +6,9 @@ class PlanToWatchListing extends Component {
     showWatchList() {
         if(this.props.watchList.length === 0) {
             return (
-                <div>
+                <div className="message">
                     <h2>Nothing on your watch list yet!</h2>
-                    <img className="message" src="https://media1.tenor.com/images/2c88a917bbe1144242c8669cb03b104f/tenor.gif" alt="while-waiting"/>
+                    <img src="https://media1.tenor.com/images/2c88a917bbe1144242c8669cb03b104f/tenor.gif" alt="while-waiting"/>
                 </div>
             )
         } else {

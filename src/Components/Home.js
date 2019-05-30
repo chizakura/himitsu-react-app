@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="app-header">
+                <div className="home-nav">
                     <div className="header">
                         <img className="right" src="/favicon.ico" alt="logo"/>
                         <h1>HIMITSU</h1>

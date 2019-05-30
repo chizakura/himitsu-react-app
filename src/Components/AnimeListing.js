@@ -27,9 +27,9 @@ class AnimeListing extends Component {
             )
         } else {
             return (
-                <div>
+                <div className="message">
                     <h2>{this.props.message}</h2>
-                    <img className="message" src="https://media1.giphy.com/media/1gdie7aSKnSvhfr9NC/giphy.gif" alt="no-results"/>
+                    <img src="https://media1.giphy.com/media/1gdie7aSKnSvhfr9NC/giphy.gif" alt="no-results"/>
                 </div>
             )
         }

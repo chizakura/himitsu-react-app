@@ -3,6 +3,23 @@
     padding: 0;
 }
 
+.left {
+    margin-left: 10px;
+}
+
+.right {
+    margin-right: 10px;
+}
+
+.message h2 {
+    margin: 5px;
+}
+
+.message img {
+    height: auto;
+    width: 450px;
+}
+/* NavBar */
 .navbar {
     background-color: #999CAF;
     display: flex;
@@ -18,23 +35,26 @@
     margin-left: 20px;
 }
 
+.right-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+/* SearchBar */
 .searchbar {
     display: flex;
-    width: 50%;
+    width: 60%;
 }
 
 .searchInput {
     flex-grow: 2;
+    margin: 0 0 0 10px;
+    color: #3D315B;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
 }
-
-.right-nav {
-    display: flex;
-    align-items: center;
-    /* margin-left: auto; */
-    margin-right: 20px;
-}
-
-.app-header {
+/* Home */
+.home-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,30 +68,17 @@
     justify-content: center;
 }
 
-.left {
-    margin-left: 10px;
-}
-
-.right {
-    margin-right: 10px;
-}
-
-.items {
-    display: flex;
-    margin-left: auto;
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin: 10px;
 }
-
+/* AnimeDetails */
 .grid-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 2em 0;
+    margin: 3em 0;
     height: 10em;
     width: 100%;
 }
@@ -81,6 +88,11 @@
     height: auto;
     width: 100%;
     overflow: auto;
+    cursor: default;
+}
+
+.anime-summary h4 {
+    margin: 5px;
 }
 
 .poster {
@@ -91,39 +103,46 @@
 
 .capital {
     text-transform: capitalize;
+    margin: 5px;
 }
-
+/* PlanToWatch */
 .material-icons:hover {
     color: #5F4BB6;
-}
-
-.message {
-    height: auto;
-    width: 450px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 650px) {
     .grid-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        margin: 0;
     }
 
     .grid-item {
-        margin: 5em 0;
+        margin: 2em 0 10em 0;
     }
 
     .logo {
         display: none;
     }
 
-    .navbar, .searchbar, .right-nav {
+    .navbar {
         display: flex;
         flex-direction: column;
-        width: 100%;
+    }
+
+    .searchbar {
+        margin-bottom: 10px;
+    }
+
+    .right-nav {
+        display: flex;
+        justify-content: center;
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 990px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -131,6 +150,6 @@
 
 @media only screen and (min-width: 1200px) {
     .grid-container {
-        grid-gap: 1em;
+        grid-gap: 2vw;
     }
 }
