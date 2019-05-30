@@ -47,11 +47,17 @@
 }
 
 .searchInput {
-    flex-grow: 2;
+    /* flex-grow: 2; */
+    transition: flex-grow 0.4s ease-in-out;
     margin: 0 0 0 10px;
     color: #3D315B;
     font-family: 'Quattrocento Sans', sans-serif;
     font-size: 18px;
+}
+
+.searchInput:focus {
+    flex-grow: 2;
+    outline: none;
 }
 /* Home */
 .home-nav {
