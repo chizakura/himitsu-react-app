@@ -9,10 +9,10 @@ class Home extends Component {
                 <div className="home-nav">
                     <div className="header">
                         <img className="right" src="/favicon.ico" alt="logo"/>
-                        <h1>HIMITSU</h1>
+                        <h1 className="title">HIMITSU</h1>
                     </div>
                     <SearchBar
-                        searchbar=""
+                        searchbar="home-searchbar"
                         handleInputChange={this.props.handleInputChange}
                         searchValue={this.props.searchValue}
                         handleSearch={this.props.handleSearch}
