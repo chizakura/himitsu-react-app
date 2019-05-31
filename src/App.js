@@ -15,7 +15,8 @@ class App extends Component {
       searchValue: "",
       animeList: [],
       watchList: [],
-      message: ""
+      message: "",
+      idList: []
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -72,17 +73,20 @@ class App extends Component {
 
   handleWatchListToggle(anime) {
     let newWatchList = [...this.state.watchList];
-    let idList = newWatchList.map((anime) => {
+    let newIdList = newWatchList.map((anime) => {
       return (anime.id)
     })
-    const idIndex = idList.indexOf(anime.id);
+    const idIndex = newIdList.indexOf(anime.id);
     if(idIndex > -1) {
       newWatchList.splice(idIndex, 1);
+      newIdList.splice(idIndex, 1);
     } else {
       newWatchList.push(anime);
+      newIdList.push(anime.id)
     }
     this.setState({
-      watchList: newWatchList
+      watchList: newWatchList,
+      idList: newIdList
     })
   }
 
@@ -101,11 +105,11 @@ class App extends Component {
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
-              watchList={this.state.watchList}
               animeList={this.state.animeList}
               checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}
               message={this.state.message}
+              idList={this.state.idList}
             />
           }/>
           <Route exact path="/plantowatch" render={() =>
@@ -123,10 +127,9 @@ class App extends Component {
               handleInputChange={this.handleInputChange}
               searchValue={this.state.searchValue}
               handleSearch={this.handleSearch}
-              animeList={this.state.animeList}
-              watchList={this.state.watchList}
               checkPosterImage={this.checkPosterImage}
               handleWatchListToggle={this.handleWatchListToggle}
+              idList={this.state.idList}
             />
           }/>
         </div>

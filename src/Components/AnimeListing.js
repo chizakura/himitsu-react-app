@@ -19,7 +19,7 @@ class AnimeListing extends Component {
                                 status={anime.attributes.status}
                                 synopsis={anime.attributes.synopsis}
                                 handleWatchListToggle={this.props.handleWatchListToggle}
-                                onList={this.props.watchList.includes(anime)}
+                                onList={this.props.idList.includes(anime.id)}
                             />
                         )
                     })}
