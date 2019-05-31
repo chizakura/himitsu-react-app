@@ -21,7 +21,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 **Himitsu** is a React application that uses Kitsu API to get basic information on any anime. The user can browse a list of anime by using a search bar. The user can also add anime to a watch list to keep track of anime they plan to watch and check a list of trending anime.
 
-<!-- - [Himitsu - React Application]() -->
+- [Himitsu - React Application](https://himitsu-react.herokuapp.com/)
 - [Kitsu Website](https://kitsu.io/anime)
 - [Kitsu API Documentation](https://kitsu.docs.apiary.io/#reference)
 
