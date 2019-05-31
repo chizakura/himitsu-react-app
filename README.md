@@ -131,7 +131,7 @@ Time frames are also key in the development cycle. You have limited time to code
 
 ## Additional Libraries
 
- Use this section to list all supporting libraries and thier role in the project.
+ Use this section to list all supporting libraries and their role in the project.
  
 | Library | What it Does |
 | --- | --- |
